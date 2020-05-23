@@ -1,4 +1,7 @@
 export const FETCH_HACKER_NEWS_FEED = 'fetch_hacker_news_feed';
+import ArgonStorage from 'argon-storage';
+
+const store = new ArgonStorage();
 
 export const fetchHackerNewsFeed = (page) => async (...args) => {
     const [dispatch, , api] = args;
@@ -19,12 +22,8 @@ function getUpvotes() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
-                if (typeof Storage !== 'undefined') {
-                    const ls = localStorage.getItem(UPVOTES) || '{}';
-                    resolve(JSON.parse(ls));
-                } else {
-                    resolve({}); // Server side resolve
-                }
+                const ls = store.get(UPVOTES) || {};
+                resolve(ls);
             } catch (e) {
                 reject(e);
             }
@@ -35,21 +34,15 @@ function updateUpvotesLS(authorId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
-                if (typeof Storage !== 'undefined') {
-                    const ls = JSON.parse(localStorage.getItem(UPVOTES) || '{}');
-                    const prevCount = ls[authorId] || 0;
-                    if (prevCount < 10) {
-                        ls[authorId] = prevCount + 1;
-                    }
-                    localStorage.setItem(UPVOTES, JSON.stringify(ls));
-                    resolve({
-                        [authorId]: ls[authorId]
-                    }); // Assuming API will return new count for given authorId
-                } else {
-                    resolve({
-                        [authorId]: 0
-                    });
+                const ls = store.get(UPVOTES) || {};
+                const prevCount = ls[authorId] || 0;
+                if (prevCount < 10) {
+                    ls[authorId] = prevCount + 1;
                 }
+                store.set(UPVOTES, ls);
+                resolve({
+                    [authorId]: ls[authorId]
+                }); // Assuming API will return new count for given authorId
             } catch (e) {
                 reject(e);
             }
@@ -61,12 +54,8 @@ function getHidden() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
-                if (typeof Storage !== 'undefined') {
-                    const ls = localStorage.getItem('hidden') || '{}';
-                    resolve(JSON.parse(ls));
-                } else {
-                    resolve({}); // For server side
-                }
+                const ls = store.get('hidden') || {};
+                resolve(ls);
             } catch (e) {
                 reject(e);
             }
@@ -78,17 +67,11 @@ function hideFeedLS(authorId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             try {
-                if (typeof Storage !== 'undefined') {
-                    const ls = JSON.parse(localStorage.getItem('hidden') || '{}');
-                    ls[authorId] = true;
-                    resolve({
-                        [authorId]: true
-                    });
-                } else {
-                    resolve({
-                        [authorId]: false
-                    });
-                }
+                const ls = store.get('hidden') || {};
+                ls[authorId] = true;
+                resolve({
+                    [authorId]: store.available
+                });
             } catch (e) {
                 reject(e);
             }
