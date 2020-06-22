@@ -10,12 +10,12 @@ const Anchor = ({ children, href, className, onClick }) => {
             }}>{children}</a>
         );
     }
-    return;
+    return null;
 }
 
 Anchor.propTypes = {
-    children: PropTypes.any.isRequired,
-    href: PropTypes.string.isRequired,
+    children: PropTypes.any,
+    href: PropTypes.string,
     className: PropTypes.string,
     onClick: PropTypes.func
 };

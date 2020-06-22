@@ -89294,12 +89294,12 @@ var Anchor = function Anchor(_ref) {
     }, children);
   }
 
-  return;
+  return null;
 };
 
 Anchor.propTypes = {
-  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any.isRequired,
-  href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any,
+  href: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   onClick: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };

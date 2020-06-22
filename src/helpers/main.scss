@@ -46,18 +46,18 @@ a,
     display: inline-block;
     width: 0;
     height: 0;
-    border: 5px solid transparent;
+    border: convert-to-rem(5px) solid transparent;
 
     &.up {
-        border-bottom: 5px solid $border-color-caret;
+        border-bottom: convert-to-rem(5px) solid $border-color-caret;
         border-top: 0;
     }
 }
 
 .logo {
+    @include width(48px);
+    @include margin-right(4px);
     display: inline-block;
-    width: 48px;
-    margin-right: 4px;
 
     img {
         width: 100%;

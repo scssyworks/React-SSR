@@ -2,9 +2,9 @@
 
 %light-text-fixed {
     @include text-overflow-ellipsis;
+    @include font-size(13px);
+    @include max-width(200px);
     color: $color-secondary;
-    font-size: 13px;
-    max-width: 200px;
 }
 
 .hacker-news-feed {
@@ -12,7 +12,7 @@
     overflow-x: auto;
 
     table {
-        @include table-fixed();
+        @include table-fixed;
 
         tbody {
             tr {
@@ -23,16 +23,15 @@
         }
 
         th {
+            @include font-size(12px);
+            @include line-height(16px, 12px);
+            @include padding(4px);
             white-space: nowrap;
-            $line-height: 16px/12px;
-            padding: 4px;
-            font-size: 12px;
-            line-height: $line-height;
         }
 
         td {
+            @include padding(4px);
             white-space: nowrap;
-            padding: 4px;
 
             &.url {
                 @extend %light-text-fixed;
@@ -48,8 +47,8 @@
 
             .upvote-control {
                 button {
+                    @include padding(12px 16px);
                     width: 100%;
-                    padding: 12px 16px;
                 }
             }
         }
@@ -57,5 +56,5 @@
 }
 
 .recharts-responsive-container {
-    margin-top: 24px;
+    @include margin-top(24px);
 }
