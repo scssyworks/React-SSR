@@ -4,6 +4,13 @@ import { connect } from 'react-redux';
 import { LineChart, ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line } from 'recharts';
 import { fetchHackerNewsFeed, fetchUpvotes, updateUpvotes, fetchHiddenFeeds, hideFeed } from '../../actions';
 import './index.scss';
+import Table from '../../atoms/Table';
+import THeading from '../../molecules/THeading';
+import TContent from '../../molecules/TContent';
+import Button from '../../atoms/Button';
+import TRow from '../../atoms/TRow';
+import TCell from '../../atoms/TCell';
+import Anchor from '../../atoms/Anchor';
 
 class HomePage extends Component {
     static propTypes = {
@@ -16,6 +23,10 @@ class HomePage extends Component {
         fetchUpvotes: PropTypes.func.isRequired,
         fetchHiddenFeeds: PropTypes.func.isRequired
     };
+
+    heading = [
+        'Comments', 'Upvotes', '', 'Title', 'Domain', 'Posted By', 'Posted When?'
+    ];
 
     page = 1;
     getUpvotes(authorId) {
@@ -44,23 +55,25 @@ class HomePage extends Component {
         return feed
             .filter(feedItem => !hidden[feedItem.authorId])
             .map(feedItem => (
-                <tr key={feedItem.authorId}>
-                    <td className="comment-count">{feedItem.commentCount}</td>
-                    <td className="upvote-count">{this.getUpvotes(feedItem.authorId)}</td>
-                    <td className="upvote-control">
-                        <button onClick={() => this.upvote(feedItem.authorId)} type="button">
+                <TRow key={feedItem.authorId}>
+                    <TCell className="comment-count">{feedItem.commentCount}</TCell>
+                    <TCell className="upvote-count">{this.getUpvotes(feedItem.authorId)}</TCell>
+                    <TCell className="upvote-control">
+                        <Button onClick={() => this.upvote(feedItem.authorId)}>
                             <span className="caret up"></span>
                             <span className="sr-only">Upvode</span>
-                        </button>
-                    </td>
-                    <td className="title">{feedItem.title}</td>
-                    <td className="url">{feedItem.url ? <a href={feedItem.url}>{feedItem.url}</a> : ''}</td>
-                    <td className="author">{feedItem.author}</td>
-                    <td className="time">
+                        </Button>
+                    </TCell>
+                    <TCell className="title">{feedItem.title}</TCell>
+                    <TCell className="url">
+                        <Anchor href={feedItem.url}>{feedItem.url}</Anchor>
+                    </TCell>
+                    <TCell className="author">{feedItem.author}</TCell>
+                    <TCell className="time">
                         <span>{feedItem.time}</span>
-                        <button onClick={() => this.hideItem(feedItem.authorId)} type="button">[hide]</button>
-                    </td>
-                </tr>
+                        <Button onClick={() => this.hideItem(feedItem.authorId)}>[hide]</Button>
+                    </TCell>
+                </TRow>
             ));
     }
 
@@ -82,24 +95,12 @@ class HomePage extends Component {
         return (
             <React.Fragment>
                 <div className="hacker-news-feed">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Comments</th>
-                                <th>Upvotes</th>
-                                <th></th>
-                                <th>Title</th>
-                                <th>Domain</th>
-                                <th>Posted By</th>
-                                <th>Posted when?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.renderFeed()}
-                        </tbody>
-                    </table>
+                    <Table>
+                        <THeading heading={this.heading}></THeading>
+                        <TContent>{this.renderFeed()}</TContent>
+                    </Table>
                 </div>
-                <button onClick={this.loadMoreResults} className="load-more-btn mt-4 mb-4" type="button">Load More</button>
+                <Button onClick={this.loadMoreResults} className="load-more-btn mt-4 mb-4">Load More</Button>
                 <ResponsiveContainer height={300} width="100%">
                     <LineChart data={this.getChartData()}>
                         <CartesianGrid strokeDasharray="3 3" />
