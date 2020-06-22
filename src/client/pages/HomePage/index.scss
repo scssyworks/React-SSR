@@ -1,13 +1,14 @@
-@import "../../styles/common/imports";
+@import "../../styles/global/imports";
 
 %light-text-fixed {
+    @include text-overflow-ellipsis;
     color: $color-secondary;
     font-size: 13px;
     max-width: 200px;
 }
 
 .hacker-news-feed {
-    @extend %no-wrap;
+    white-space: nowrap;
     overflow-x: auto;
 
     table {
@@ -22,7 +23,7 @@
         }
 
         th {
-            @extend %no-wrap;
+            white-space: nowrap;
             $line-height: 16px/12px;
             padding: 4px;
             font-size: 12px;
@@ -30,17 +31,15 @@
         }
 
         td {
-            @extend %no-wrap;
+            white-space: nowrap;
             padding: 4px;
 
             &.url {
                 @extend %light-text-fixed;
-                @extend %ellipsis;
             }
 
             &.time {
                 @extend %light-text-fixed;
-                @extend %ellipsis;
 
                 a {
                     display: inline;

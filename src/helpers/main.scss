@@ -8,8 +8,8 @@
 @import "~bootstrap/scss/utilities/screenreaders";
 @import "~bootstrap/scss/utilities/spacing";
 
-@import "../client/styles/common/imports";
-@import "../client/styles/common/typography";
+@import "../client/styles/global/imports";
+@import "../client/styles/global/typography";
 
 body {
     font-family: $font-family-default;
@@ -21,7 +21,7 @@ body {
 }
 
 button {
-    @extend %cursor;
+    cursor: pointer;
     background-color: transparent;
     border: 0;
     outline: 0;
@@ -29,7 +29,7 @@ button {
 
 a,
 [tabindex] {
-    @extend %cursor;
+    cursor: pointer;
     display: inline-block;
 
     &,

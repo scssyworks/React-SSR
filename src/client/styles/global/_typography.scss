@@ -1,0 +1,13 @@
+%heading {
+    font-family: $font-family-default;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @extend %heading;
+    $font-size: 18px;
+    @include font-size($font-size);
+    @include line-height(24px, $font-size);
+}

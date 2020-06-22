@@ -1,16 +1,13 @@
-.hacker-news-feed table td.url, .hacker-news-feed table td.time, .hacker-news-feed, .hacker-news-feed table th, .hacker-news-feed table td {
-  white-space: nowrap; }
-
 .hacker-news-feed table td.url, .hacker-news-feed table td.time {
   overflow: hidden;
-  text-overflow: ellipsis; }
-
-.hacker-news-feed table td.url, .hacker-news-feed table td.time {
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: #707070;
   font-size: 13px;
   max-width: 200px; }
 
 .hacker-news-feed {
+  white-space: nowrap;
   overflow-x: auto; }
   .hacker-news-feed table {
     table-layout: fixed;
@@ -19,10 +16,12 @@
     .hacker-news-feed table tbody tr:nth-child(even) {
       background-color: #dadada; }
     .hacker-news-feed table th {
+      white-space: nowrap;
       padding: 4px;
       font-size: 12px;
       line-height: 1.33333; }
     .hacker-news-feed table td {
+      white-space: nowrap;
       padding: 4px; }
       .hacker-news-feed table td.time a {
         display: inline; }
