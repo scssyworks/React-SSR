@@ -725,6 +725,193 @@ Table.propTypes = {
 
 /***/ }),
 
+/***/ "./src/client/components/Feed/index.js":
+/*!*********************************************!*\
+  !*** ./src/client/components/Feed/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "@babel/runtime/helpers/classCallCheck");
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "@babel/runtime/helpers/createClass");
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/assertThisInitialized */ "@babel/runtime/helpers/assertThisInitialized");
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "@babel/runtime/helpers/inherits");
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "@babel/runtime/helpers/possibleConstructorReturn");
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "@babel/runtime/helpers/getPrototypeOf");
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "@babel/runtime/helpers/defineProperty");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _atoms_Table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../atoms/Table */ "./src/client/atoms/Table/index.js");
+/* harmony import */ var _molecules_THeading__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../molecules/THeading */ "./src/client/molecules/THeading/index.js");
+/* harmony import */ var _molecules_TContent__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../molecules/TContent */ "./src/client/molecules/TContent/index.js");
+/* harmony import */ var _atoms_TRow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../atoms/TRow */ "./src/client/atoms/TRow/index.js");
+/* harmony import */ var _atoms_TCell__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../atoms/TCell */ "./src/client/atoms/TCell/index.js");
+/* harmony import */ var _atoms_Button__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../atoms/Button */ "./src/client/atoms/Button/index.js");
+/* harmony import */ var _atoms_Anchor__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../atoms/Anchor */ "./src/client/atoms/Anchor/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../actions */ "./src/client/actions/index.js");
+
+
+
+
+
+
+
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Feed = /*#__PURE__*/function (_PureComponent) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Feed, _PureComponent);
+
+  var _super = _createSuper(Feed);
+
+  function Feed() {
+    var _this;
+
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Feed);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _super.call.apply(_super, [this].concat(args));
+
+    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "heading", ['Comments', 'Upvotes', '', 'Title', 'Domain', 'Posted By', 'Posted When?']);
+
+    return _this;
+  }
+
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Feed, [{
+    key: "hideItem",
+    value: function hideItem(authorId) {
+      this.props.hideFeed(authorId);
+    }
+  }, {
+    key: "upvote",
+    value: function upvote(authorId) {
+      this.props.updateUpvotes(authorId);
+    }
+  }, {
+    key: "getUpvotes",
+    value: function getUpvotes(authorId) {
+      var upvotes = this.props.upvotes;
+
+      if (upvotes && upvotes[authorId]) {
+        return +upvotes[authorId];
+      }
+
+      return 0;
+    }
+  }, {
+    key: "renderFeed",
+    value: function renderFeed() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          feed = _this$props.feed,
+          hidden = _this$props.hidden;
+      return feed.filter(function (feedItem) {
+        return !hidden[feedItem.authorId];
+      }).map(function (feedItem) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TRow__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          key: feedItem.authorId
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "comment-count"
+        }, feedItem.commentCount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "upvote-count"
+        }, _this2.getUpvotes(feedItem.authorId)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "upvote-control"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          onClick: function onClick() {
+            return _this2.upvote(feedItem.authorId);
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+          className: "caret up"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+          className: "sr-only"
+        }, "Upvode"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "title"
+        }, feedItem.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "url"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Anchor__WEBPACK_IMPORTED_MODULE_15__["default"], {
+          href: feedItem.url
+        }, feedItem.url)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "author"
+        }, feedItem.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_13__["default"], {
+          className: "time"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, feedItem.time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_14__["default"], {
+          onClick: function onClick() {
+            return _this2.hideItem(feedItem.authorId);
+          }
+        }, "[hide]")));
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "hacker-news-feed"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Table__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_molecules_THeading__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        heading: this.heading
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_molecules_TContent__WEBPACK_IMPORTED_MODULE_11__["default"], null, this.renderFeed())));
+    }
+  }]);
+
+  return Feed;
+}(react__WEBPACK_IMPORTED_MODULE_7__["PureComponent"]);
+
+_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Feed, "propTypes", {
+  feed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object).isRequired,
+  hidden: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object.isRequired,
+  upvotes: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object.isRequired,
+  updateUpvotes: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired,
+  hideFeed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired
+});
+
+function mapStateToProps(_ref) {
+  var feed = _ref.feed,
+      hidden = _ref.hidden,
+      upvotes = _ref.upvotes;
+  return {
+    feed: feed,
+    hidden: hidden,
+    upvotes: upvotes
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_16__["connect"])(mapStateToProps, {
+  updateUpvotes: _actions__WEBPACK_IMPORTED_MODULE_17__["updateUpvotes"],
+  hideFeed: _actions__WEBPACK_IMPORTED_MODULE_17__["hideFeed"]
+})(Feed));
+
+/***/ }),
+
 /***/ "./src/client/components/Header/index.js":
 /*!***********************************************!*\
   !*** ./src/client/components/Header/index.js ***!
@@ -912,13 +1099,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../actions */ "./src/client/actions/index.js");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./index.scss */ "./src/client/pages/HomePage/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _atoms_Table__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../atoms/Table */ "./src/client/atoms/Table/index.js");
-/* harmony import */ var _molecules_THeading__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../molecules/THeading */ "./src/client/molecules/THeading/index.js");
-/* harmony import */ var _molecules_TContent__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../molecules/TContent */ "./src/client/molecules/TContent/index.js");
-/* harmony import */ var _atoms_Button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../atoms/Button */ "./src/client/atoms/Button/index.js");
-/* harmony import */ var _atoms_TRow__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../atoms/TRow */ "./src/client/atoms/TRow/index.js");
-/* harmony import */ var _atoms_TCell__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../atoms/TCell */ "./src/client/atoms/TCell/index.js");
-/* harmony import */ var _atoms_Anchor__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../atoms/Anchor */ "./src/client/atoms/Anchor/index.js");
+/* harmony import */ var _atoms_Button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../atoms/Button */ "./src/client/atoms/Button/index.js");
+/* harmony import */ var _components_Feed__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../components/Feed */ "./src/client/components/Feed/index.js");
 
 
 
@@ -930,11 +1112,6 @@ __webpack_require__.r(__webpack_exports__);
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-
-
-
-
 
 
 
@@ -961,8 +1138,6 @@ var HomePage = /*#__PURE__*/function (_Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "heading", ['Comments', 'Upvotes', '', 'Title', 'Domain', 'Posted By', 'Posted When?']);
-
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "page", 1);
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "loadMoreResults", function () {
@@ -971,77 +1146,16 @@ var HomePage = /*#__PURE__*/function (_Component) {
       _this.props.fetchHackerNewsFeed(_this.page);
     });
 
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "hideItem", function (authorId) {
-      _this.props.hideFeed(authorId);
-    });
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2___default()(_this), "renderFeed", function () {
-      var _this$props = _this.props,
-          feed = _this$props.feed,
-          hidden = _this$props.hidden;
-      return feed.filter(function (feedItem) {
-        return !hidden[feedItem.authorId];
-      }).map(function (feedItem) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TRow__WEBPACK_IMPORTED_MODULE_17__["default"], {
-          key: feedItem.authorId
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "comment-count"
-        }, feedItem.commentCount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "upvote-count"
-        }, _this.getUpvotes(feedItem.authorId)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "upvote-control"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_16__["default"], {
-          onClick: function onClick() {
-            return _this.upvote(feedItem.authorId);
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-          className: "caret up"
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-          className: "sr-only"
-        }, "Upvode"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "title"
-        }, feedItem.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "url"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Anchor__WEBPACK_IMPORTED_MODULE_19__["default"], {
-          href: feedItem.url
-        }, feedItem.url)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "author"
-        }, feedItem.author), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_TCell__WEBPACK_IMPORTED_MODULE_18__["default"], {
-          className: "time"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, feedItem.time), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_16__["default"], {
-          onClick: function onClick() {
-            return _this.hideItem(feedItem.authorId);
-          }
-        }, "[hide]")));
-      });
-    });
-
     return _this;
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(HomePage, [{
-    key: "getUpvotes",
-    value: function getUpvotes(authorId) {
-      var upvotes = this.props.upvotes;
-
-      if (upvotes && upvotes[authorId]) {
-        return +upvotes[authorId];
-      }
-
-      return 0;
-    }
-  }, {
-    key: "upvote",
-    value: function upvote(authorId) {
-      this.props.updateUpvotes(authorId);
-    }
-  }, {
     key: "getChartData",
     value: function getChartData() {
-      var _this$props2 = this.props,
-          feed = _this$props2.feed,
-          upvotes = _this$props2.upvotes,
-          hidden = _this$props2.hidden;
+      var _this$props = this.props,
+          feed = _this$props.feed,
+          upvotes = _this$props.upvotes,
+          hidden = _this$props.hidden;
       return feed.filter(function (feedItem) {
         return !hidden[feedItem.authorId];
       }).map(function (feedItem) {
@@ -1054,10 +1168,10 @@ var HomePage = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props3 = this.props,
-          feed = _this$props3.feed,
-          upvotes = _this$props3.upvotes,
-          hidden = _this$props3.hidden;
+      var _this$props2 = this.props,
+          feed = _this$props2.feed,
+          upvotes = _this$props2.upvotes,
+          hidden = _this$props2.hidden;
 
       if (!(feed && upvotes && hidden)) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -1065,11 +1179,7 @@ var HomePage = /*#__PURE__*/function (_Component) {
         }, "Loading...");
       }
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "hacker-news-feed"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Table__WEBPACK_IMPORTED_MODULE_13__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_molecules_THeading__WEBPACK_IMPORTED_MODULE_14__["default"], {
-        heading: this.heading
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_molecules_TContent__WEBPACK_IMPORTED_MODULE_15__["default"], null, this.renderFeed()))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_16__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Feed__WEBPACK_IMPORTED_MODULE_14__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_atoms_Button__WEBPACK_IMPORTED_MODULE_13__["default"], {
         onClick: this.loadMoreResults,
         className: "load-more-btn mt-4 mb-4"
       }, "Load More"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(recharts__WEBPACK_IMPORTED_MODULE_10__["ResponsiveContainer"], {
@@ -1101,11 +1211,9 @@ var HomePage = /*#__PURE__*/function (_Component) {
 
 _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(HomePage, "propTypes", {
   upvotes: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object.isRequired,
-  feed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.array.isRequired,
+  feed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object).isRequired,
   hidden: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object.isRequired,
-  updateUpvotes: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired,
   fetchHackerNewsFeed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired,
-  hideFeed: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired,
   fetchUpvotes: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired,
   fetchHiddenFeeds: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func.isRequired
 });
@@ -1129,9 +1237,7 @@ function loadData(store) {
   component: Object(react_redux__WEBPACK_IMPORTED_MODULE_9__["connect"])(mapStateToProps, {
     fetchHackerNewsFeed: _actions__WEBPACK_IMPORTED_MODULE_11__["fetchHackerNewsFeed"],
     fetchUpvotes: _actions__WEBPACK_IMPORTED_MODULE_11__["fetchUpvotes"],
-    updateUpvotes: _actions__WEBPACK_IMPORTED_MODULE_11__["updateUpvotes"],
-    fetchHiddenFeeds: _actions__WEBPACK_IMPORTED_MODULE_11__["fetchHiddenFeeds"],
-    hideFeed: _actions__WEBPACK_IMPORTED_MODULE_11__["hideFeed"]
+    fetchHiddenFeeds: _actions__WEBPACK_IMPORTED_MODULE_11__["fetchHiddenFeeds"]
   })(HomePage),
   loadData: loadData
 });
