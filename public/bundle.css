@@ -1,3 +1,6 @@
+.recharts-responsive-container {
+  margin-top: 1.71429rem; }
+
 .hacker-news-feed table td.url, .hacker-news-feed table td.time {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -28,9 +31,6 @@
       .hacker-news-feed table td .upvote-control button {
         padding: 0.85714rem 1.14286rem;
         width: 100%; }
-
-.recharts-responsive-container {
-  margin-top: 1.71429rem; }
 
 header {
   margin-left: -1.07143rem;

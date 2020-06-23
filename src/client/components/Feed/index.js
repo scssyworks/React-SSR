@@ -9,6 +9,7 @@ import Button from '../../atoms/Button';
 import Anchor from '../../atoms/Anchor';
 import { connect } from 'react-redux';
 import { updateUpvotes, hideFeed } from '../../actions';
+import './index.scss';
 
 class Feed extends PureComponent {
     static propTypes = {

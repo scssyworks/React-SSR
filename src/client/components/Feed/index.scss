@@ -1,0 +1,56 @@
+@import '../../styles/global/imports';
+
+%light-text-fixed {
+    @include text-overflow-ellipsis;
+    @include font-size(13px);
+    @include max-width(200px);
+    color: $color-secondary;
+}
+
+.hacker-news-feed {
+    white-space: nowrap;
+    overflow-x: auto;
+
+    table {
+        @include table-fixed;
+
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background-color: $bg-color-secondary;
+                }
+            }
+        }
+
+        th {
+            @include font-size(12px);
+            @include line-height(16px, 12px);
+            @include padding(4px);
+            white-space: nowrap;
+        }
+
+        td {
+            @include padding(4px);
+            white-space: nowrap;
+
+            &.url {
+                @extend %light-text-fixed;
+            }
+
+            &.time {
+                @extend %light-text-fixed;
+
+                a {
+                    display: inline;
+                }
+            }
+
+            .upvote-control {
+                button {
+                    @include padding(12px 16px);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
