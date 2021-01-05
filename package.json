@@ -20,7 +20,7 @@
         "@babel/preset-env": "^7.10.3",
         "@babel/preset-react": "^7.10.1",
         "argon-storage": "^2.0.13",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "babel-loader": "^8.1.0",
         "bootstrap": "^4.5.0",
         "compression": "^1.7.4",
